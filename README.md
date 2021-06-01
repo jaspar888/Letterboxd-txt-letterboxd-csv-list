@@ -59,7 +59,7 @@ These are the things you are going to need to have installed for this script to 
 2. Make sure you dont have any files named "IMPORT_THIS_TO_LETTERBOXD.csv" or "COULD_NOT_FIND_THESE_FILMS_LIST.txt"
 
 3. Run the script
-   make sure you have a good internet connection and time, python isnt known for its efficiency. 
+   and make sure you have a good internet connection and time, python isnt known for its efficiency. 
 
 
 <!-- CONTACT -->
