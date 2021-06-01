@@ -2,13 +2,14 @@ from imdb import IMDb
 import csv 
 
 #Todo, read a file, get rid of junk, get imbd to search for the movie names induvidually, add those to .csv
+filename = input("What is the exact name of the text file you want me to read? (must be in the same direcotry as this script!): ")
 ia = IMDb()
 #makes the csv file blank and puts Title at the top, bc thats what letterboxd needs for it to be compatible
-with open('employee_file.csv', mode='w') as csv1:
+with open('IMPORT_THIS_TO_LETTERBOXD.csv', mode='w') as csv1:
     csv2 = csv.writer(csv1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     csv2.writerow(['Title'])
 #read the file then itterate thrrough all lines of the file
-f = open("torrents.txt", "r", encoding='utf-8')
+f = open(filename, "r", encoding='utf-8')
 for line in f:
     try:
         movee = line.replace(".", " ")
