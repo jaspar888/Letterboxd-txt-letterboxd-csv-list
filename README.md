@@ -38,7 +38,7 @@ Any movie that imdb cannot find will be put into a seperate .txt file called "CO
 ## Getting Started
 
 To get a local copy up and running follow these steps. 
-MAKE SURE YOUR TXT LIST IS CALLED "torrents.txt" OTHERWISE THE SCRIPT WILL NOT WORK
+MAKE SURE YOU ENTER THE EXACT NAME OF THE FILE WHEN IT ASKS YOU, I.E. torrents.txt
 
 ### Prerequisites
 
