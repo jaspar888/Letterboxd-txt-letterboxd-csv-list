@@ -16,7 +16,7 @@ for line in f:
     try:
         #remove cringe
         movee = line
-        characters = [".", "(", ")", "-", "_"]
+        characters = [".", "+", "(", ")", "-", "_", "   ", "  "]
         for character in characters:
             if character in movee:
                 movee = movee.replace(character, " ")
@@ -42,7 +42,11 @@ for line in f:
         "T,O,U,C,H,I,N,G", "CiNEMAGROTESQUE", "VHSrip", "AquA", "KRaLiMaRKo", "3ivxPoutineKing", "Distanasia", "pirata00", "PTBar", 
         "SILENT", "DEPTH", "KinghdDOWNLOAD", "MP4", "dev0", "SADPANDA", "DD5", "5REMUX", "Short", "dps", "WebDL", "Dariush", "ExREN", 
         "5 1", "NF", "BmP", "USURY", "cinefile", "GECKOS", "spooks", "limited", "MeFecit", "4U", "KJNU", "CHD", "DD", "MPEG2", 
-        "REMUXRPG", "HD", "killerhd", "GHOULS", "ZineSouce", "MAYS", " 0 ", "WHRen", "AVRS", "RUT"]
+        "REMUXRPG", "HD", "killerhd", "GHOULS", "ZineSouce", "MAYS", " 0 ", "WHRen", "AVRS", "RUT", "WEB DL", "PRAGMA", "DIR", 
+        "KESH", "0FBF0E45", "eXo", "WiSE", " X ", "7SinS", "PRAGMA", "CAM", "INTERNAL", " h ", " R ", "LIMITED", " 1 ", " EA ", 
+        "x260bit", " MA ", "de42", "DXVA", "Blu Ray", "Amazon", "Frederick Wiseman", " ZN ", "CRITERION", "Ken jacobs", 
+        "Kenneth Anger", "Jacques Rivette", "John Smith", "Kenneth Anger", "FraMeSToR", " SD", " 5", "DOWNLOAD", " hd ", "rovers", 
+        "Rip", "Collection"]
         #remove more cringe
         for extention in extentions:
             if extention in movee:
@@ -50,6 +54,13 @@ for line in f:
             else:
                 pass
             #search n print result then write to the csv we made earlier
+        
+        for year in range(1900, 2021):
+            if str(year) in movee:
+                
+                movee = movee.replace(str(year), "")
+            #else IndexError: 
+                #pass
         movie = ia.search_movie(movee)
         #only prints the first search result
         print(movie[0])
@@ -60,8 +71,5 @@ for line in f:
     except IndexError:
         #when it cant find the movie, it adds it to a text file so you know what movies you need to add manually
         print("could not find " + movee)
-        c = open("COULD_NOT_FIND_THESE_FILMS_LIST.txt", "a", encoding='utf-8')
-        c.write(movee)
-    #except:
-        #catches all errors, your guess is as good as mine, but check that you have all the files, cause maybe your firewall is blocking the script from making files?
-        #print("something went very wrong")
+        cum = open("COULD_NOT_FIND_THESE_FILMS_LIST.txt", "a", encoding='utf-8')
+        cum.write(line)
